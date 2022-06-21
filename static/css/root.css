@@ -1,0 +1,22 @@
+body
+{
+	/*background-color: #064e3b;*/
+	background-color: #00594a;
+	margin: 0;
+	padding: 0;
+}
+
+form#loginForm input
+{
+	padding: 25px;
+	border-radius: 1.375rem;
+	font-size: 1rem;
+	text-align: center;
+}
+.error-500
+{
+	line-height: 0;
+}
+.text-15xl{
+	font-size: 32.375rem;
+}

@@ -1,0 +1,51 @@
+{% extends 'base_template.html' %}
+
+{% block page_title %} Login Form {% endblock %}
+
+{% block container_content %}
+<div class="mt-12">
+	<h1 class="text-center font-sans text-5xl text-slate-100 my-9"> Login Form </h1>
+
+	<!-- Field Form -->
+	<div class="border-2 border-slate-100 rounded-3xl p-10 flex justify-center content-center">
+		<form action="/user/login" id="loginForm" method="POST" class="flex flex-col items-center">
+			<div class="my-4">
+				<input type="text" name="username" id="username" class="input-field mx-4 text-emerald-600" placeholder="Username" required tabindex="1" />
+			</div>
+			<br>
+			<div class="my-4">
+				<input type="password" name="password" placeholder="Password" id="password" class="input-field mx-4 text-emerald-600" required tabindex="2" />
+			</div>
+			<button type="submit" class="border-emerald-500 bg-emerald-500 rounded-full py-3 px-9 m-7" id="submit-form">
+				Log In
+			</button>
+		</form>
+	</div>
+
+	<!-- Database table -->
+	<div class="border-2 border-slate-100 rounded-2xl p-14 mt-36 flex justify-center text-slate-100">
+		<table class="grid gap-2.5 border">
+			<tr>
+				<th class="border p-4"> ID </th>
+				<th class="border p-4"> Username </th>
+				<th class="border p-4"> Password </th>
+				<th class="border p-4"> Date Created </th>
+				<th class="border p-4"> Actions </th>
+			</tr>
+			<tr>
+				<td class="border p-4"> id </td>
+				<td class="border p-4"> username </td>
+				<td class="border p-4"> password </td>
+				<td class="border p-4 text-md text-slate-100 font-sans">
+					<a href="/user/creds/update" class="hover:underline mx-3">
+						<i class="bi bi-arrow-clockwise text-slate-100 text-xl"></i>
+					</a>
+					<a href="/user/creds/delete" class="hover:underline mx-3">
+						<i class="bi bi-trash text-slate-100 text-xl"></i>
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base_template.html' %}
+
+{% block page_title %} Error - URL {% endblock page_title %}
+
+{% block container_content %}
+<div class="error-500 text-center text-slate-100 font-mono h-screen flex items-center justify-center">
+	<p class="text-emerald-700 text-15xl">
+		500
+	</p>
+	<p class="text-5xl uppercase absolute">
+		Internal Server error!
+		<br>
+		<br>
+		{{message if message else "Could not complete your request."}}
+	</p>
+</div>
+{% endblock container_content %}
